@@ -178,7 +178,7 @@ a:hover { text-decoration: underline; }
   margin: 0;
   font-size: clamp(18px, 2.6vw, 23px);
   color: #b9c9ee;
-  max-width: 34ch;
+  max-width: 42ch;
 }
 
 .hero .lede {
@@ -359,7 +359,7 @@ kbd {
   display: grid;
   gap: 14px;
   margin-top: 28px;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .shot {
@@ -386,9 +386,10 @@ kbd {
   border-top: 1px solid var(--line);
 }
 
-.shot:first-child { grid-column: span 2; }
+.shot:first-child { grid-column: 1 / -1; }
 
 @media (max-width: 720px) {
+  .gallery { grid-template-columns: 1fr; }
   .shot:first-child { grid-column: auto; }
 }
 
